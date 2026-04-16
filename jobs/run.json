@@ -1,0 +1,11 @@
+{
+  "scenario_id": "default",
+  "patient_ids": [["adults", 1]],
+  "controller": {
+    "kp": 0.1,
+    "ki": 0.01,
+    "kd": 0.05,
+    "setpoint": 50.0,
+    "remi_rate": 0.1
+  }
+}
