@@ -23,7 +23,7 @@ class MyController(Controller):
         i = self.ki * self.integral
         if self.first_reading:
             d = 0
-            self.first_reading = True
+            self.first_reading = False
         else:
             d = self.kd * (measurement - self.prev_measurement) / self.dt
         u_propofol = p + i + d  # roll credits

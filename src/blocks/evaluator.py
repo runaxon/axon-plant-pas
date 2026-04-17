@@ -8,7 +8,6 @@ LAMBDA = 500_000.0
 ISE_REF = BIS_TARGET ** 2 * (T_MAINTENANCE - T_INDUCTION)  # 70,000
 LAMBDA_NORM = LAMBDA / ISE_REF  # ~7.14
 
-
 class PASEvaluator(Evaluator):
     def score(self, measurements, scenario):
         """

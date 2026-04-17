@@ -9,38 +9,19 @@ class MyPlant(Plant):
     def derivatives(self, state, inputs, params):
         
         # Unpackage inputs
-        u_prop = inputs[0]
-        u_remi = inputs[1]
+        u_prop, u_remi = inputs[0:2]
 
         # Unpackage propofol compartments
-        x1_prop = state[0]  # pk
-        x2_prop = state[1]  # pk
-        x3_prop = state[2]  # pk
-        Ce_prop = state[3]  # pd
+        x1_prop, x2_prop, x3_prop, Ce_prop = state[0:4]
 
         # Unpackage remifentanil compartments
-        x1_remi = state[4]  # pk
-        x2_remi = state[5]  # pk
-        x3_remi = state[6]  # pk
-        Ce_remi = state[7]  # pd
+        x1_remi, x2_remi, x3_remi, Ce_remi = state[4:8]
 
         # Unpackage Propofol parameters
-        v1_prop = params[0]
-        k10_prop = params[1]
-        k12_prop = params[2]
-        k13_prop = params[3]
-        k21_prop = params[4]
-        k31_prop = params[5]
-        ke0_prop = params[6]
+        v1_prop, k10_prop, k12_prop, k13_prop, k21_prop, k31_prop, ke0_prop = params[0:7]
 
         # Unpackage Remifentanil parameters
-        v1_remi = params[7]
-        k10_remi = params[8]
-        k12_remi = params[9]
-        k13_remi = params[10]
-        k21_remi = params[11]
-        k31_remi = params[12]
-        ke0_remi = params[13]
+        v1_remi, k10_remi, k12_remi, k13_remi, k21_remi, k31_remi, ke0_remi = params[7:14]
 
         # Convert amount to concentration for compartment 1
         C1_prop = x1_prop / (v1_prop * 1000.0)

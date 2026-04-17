@@ -1,11 +1,23 @@
 {
-  "scenario_id": "default",
-  "patient_ids": [["adults", 1]],
-  "controller": {
-    "kp": 0.1,
-    "ki": 0.01,
-    "kd": 0.05,
-    "setpoint": 50.0,
-    "remi_rate": 0.1
+    "scenario_id": "default",
+    "patient_ids": [["adults", 1]],
+    "controller": {
+        "kp": { 
+            "min": 1000.0,
+            "max": 5000.0,
+            "step": 50
+        },
+        "ki": {
+            "min": 0.0,
+            "max": 1000.0,
+            "step": 50
+        }, 
+        "kd": {
+            "min": 0.0,
+            "max": 2000.0,
+            "step": 50
+        },
+        "setpoint": 50.0,
+        "remi_rate": 100
   }
 }
