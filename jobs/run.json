@@ -18,6 +18,6 @@
             "step": 50
         },
         "setpoint": 50.0,
-        "remi_rate": 100
+        "remi_rate": 10
   }
 }
